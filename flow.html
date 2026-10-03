@@ -6,17 +6,6 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="btns">
-    <button id="showContentBtn" class="btns">Yes,You.</button>
-  </div>
-  
-  <!-- Audio element -->
-  <audio id="backgroundAudio" src="flowers.mp3" preload="auto"></audio>
-
-  <div id="hiddenContent" style="display: none;">
-    <header class="cd__intro">
-        <h1> Flowers </h1>
-    </header>
     <main class="cd__main">
         <div class="night"></div>
         <div class="flowers">
@@ -170,22 +159,6 @@
         </div>
     </main>
   </div>
-
-  <script>
-      document.getElementById('showContentBtn').addEventListener('click', function() {
-          const hiddenContent = document.getElementById('hiddenContent');
-          const audio = document.getElementById('backgroundAudio');
-
-          if (hiddenContent.style.display === 'none') {
-              hiddenContent.style.display = 'block';
-              this.textContent = 'Sembunyikan Konten';
-              audio.play(); // Play audio when showing content
-          } else {
-              hiddenContent.style.display = 'none';
-              this.textContent = 'Tampilkan Konten';
-              audio.pause(); // Pause audio when hiding content
-              audio.currentTime = 0; // Reset audio to start
-          }
       });
   </script>
 </body>
